@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PigDice</title>
+    <link rel="stylesheet" type="text/css" href="pigDice.css"/>
+    <script type="text/javascript" src="javascript/lib/underscore-min.js"></script>
+
+
+    <!-- The PigGameConfig triad -->
+    <script type="text/javascript" src="javascript/PigGameConfig/PigGameConfig.js"></script>
+    <script type="text/javascript" src="javascript/PigGameConfig/PigGameConfig.view.js"></script>
+    <script type="text/javascript" src="javascript/PigGameConfig/PigGameConfig.controller.js"></script>
+    <!-- This triad has no model. -->
+
+    <script type="text/javascript" src="javascript/Player.js"></script>
+
+    <!-- The GameDie triad -->
+    <script type="text/javascript" src="javascript/GameDie/GameDie.js"></script>
+    <script type="text/javascript" src="javascript/GameDie/GameDie.model.js"></script>
+    <script type="text/javascript" src="javascript/GameDie/GameDie.view.js"></script>
+
+    <!-- The PigGame triad -->
+    <script type="text/javascript" src="javascript/PigGame/PigGame.js"></script>
+    <script type="text/javascript" src="javascript/PigGame/PigGame.controller.js"></script>
+    <script type="text/javascript" src="javascript/PigGame/PigGame.view.js"></script>
+    <script type="text/javascript" src="javascript/PigGame/PigGame.model.js"></script>
+
+
+    <!-- And off we go! -->
+    <script type="text/javascript">
+        window.onload = function () {
+            PigGameConfig.Controller.init();
+        }
+    </script>
+</head>
+<body>
+
+<h1>Pig Dice</h1>
+
+
+<!---------------------------------------------------------------------------------
+ !
+ !  Configuration menu
+ !
+ !--------------------------------------------------------------------------------->
+<div id="configuration">
+
+    <!--
+    TODO:  Put your configuration form / page here
+    
+     -->
+
+</div>
+
+<!---------------------------------------------------------------------------------
+ !
+ !  The game
+ !
+ !--------------------------------------------------------------------------------->
+<div id="board" class="game_board">
+    <!--
+       TODO:  Put your game board here
+       
+       -->
+</div>
+</body>
+</html>
