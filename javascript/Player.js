@@ -14,7 +14,8 @@ var Player = (function () {
         //TODO:  Add any necessary instance variables and instance methods 
 
 
-    return {
-        init: init
-    }
+        return {
+            init: init
+        }
+    };
 })();
