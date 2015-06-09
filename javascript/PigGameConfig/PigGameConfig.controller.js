@@ -16,12 +16,18 @@ PigGameConfig.Controller = (function () {
             event.preventDefault();
             var names = view.getPlayerNames();
             var targetScore = view.getTargetScore();
+
+            // array of player objects
+            var players = [];
+
+            // create new players & add to the array
             for (var i = 0; i < names.length; i++)
-                console.log(targetScore);
+                players.push(Player.init(names[i]));
 
             // After submitting the configuration form, then we can 
             // create the MVC triad that actually plays the game.
-            PigGame.Controller.init(names, targetScore);
+            //PigGame.Controller.init(names, targetScore);
+            PigGame.Controller.init(players, targetScore);
 
             // We are now done with the configuration form, so hide it.
             view.hideConfiguration();

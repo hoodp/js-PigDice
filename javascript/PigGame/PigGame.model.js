@@ -20,12 +20,21 @@ PigGame.Model = (function () {
         var currentDieValue = function() {
             return gameDie;
         };
+
         var getTargetScore = function() {
             return targetScore;
         };
 
+        var setGameDie = function(dice) {
+            gameDie = dice;
+        };
+
         var getPlayerScores = function(index) {
             return scores[index];
+        };
+
+        var getPlayerScore = function(index) {
+            return players[index].getScore();
         };
 
         var getCurrentPoint = function() {
@@ -41,10 +50,13 @@ PigGame.Model = (function () {
         };
 
         var roll = function() {
-            gameDie = Math.floor(Math.random() * 6 + 1);
+
+            // simulates rolling the dice
+            gameDie.random();
+            var points = gameDie.value();
 
             // check if user rolled a 1
-            if (gameDie === 1) {
+            if (points === 1) {
 
                 // go to next player and reset score
                 resetPoints();
@@ -52,19 +64,29 @@ PigGame.Model = (function () {
             } else {
 
                 // increment current point value
-                currentPoint += gameDie;
+                currentPoint += points;
             }
         };
 
         var pass = function() {
 
             // add current score to users array
-            if (currentPoint > 0)
+            /*if (currentPoint > 0)
                 scores[currentPlayer] += currentPoint;
 
             // check for winner
             if (scores[currentPlayer] >= getTargetScore())
-                winner = players[currentPlayer];
+                winner = players[currentPlayer];*/
+            if (currentPoint > 0)
+                players[currentPlayer].incScore(currentPoint);
+
+            /*// check for winner
+            if (players[currentPlayer].getScore() >= getTargetScore())
+                winner = players[currentPlayer];*/
+
+            // check for winner
+            if (players[currentPlayer].getScore() >= getTargetScore())
+                winner = players[currentPlayer].getName();
 
             // update current player index
             prevPlayer = currentPlayer;
@@ -85,11 +107,12 @@ PigGame.Model = (function () {
         return {
             currentDieValue: currentDieValue,
             getTargetScore: getTargetScore,
-            getPlayerScores: getPlayerScores,
+            getPlayerScore: getPlayerScore,
             getCurrentPoint: getCurrentPoint,
             getCurrentPlayer: getCurrentPlayer,
             getPrevPlayer: getPrevPlayer,
             getWinner: getWinner,
+            setGameDie: setGameDie,
             roll: roll,
             pass: pass
         }

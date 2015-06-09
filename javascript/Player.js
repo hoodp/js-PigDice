@@ -11,11 +11,29 @@ var Player = (function () {
 // for data only (i.e., it is effectively just a model.)
 
     var init = function (name_in) {
-        //TODO:  Add any necessary instance variables and instance methods
-        //var player = function()
+        var name = name_in;
+        var score = 0;
+
+        var getName = function() {
+            return name;
+        };
+
+        var getScore = function() {
+            return score;
+        };
+
+        var incScore = function(value) {
+            score += value;
+        };
 
         return {
-            init: init
-        }
+            getName : getName,
+            getScore : getScore,
+            incScore : incScore
+        };
+    };
+
+    return {
+        init: init
     };
 })();

@@ -2,44 +2,38 @@
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
+/*.header,
 .marketing,
 .footer {
     padding-right: 15px;
     padding-left: 15px;
-}
+}*/
 
-/* Custom page header */
 .header {
     padding-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
-.header h3 {
+/*.header h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
-}
+}*/
 
 /* Custom page footer */
-.footer {
+/*.footer {
     padding-top: 19px;
     color: #777;
     border-top: 1px solid #e5e5e5;
-}
+}*/
 
-/* Customize container */
-@media (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-}
-.container-narrow > hr {
+/*.container-narrow > hr {
     margin: 30px 0;
-}
+}*/
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -47,9 +41,9 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.jumbotron img {
+/*.jumbotron img {
     display: inline-block;
-}
+}*/
 
 .jumbotron .btn {
     padding: 14px 24px;
@@ -57,31 +51,31 @@ body {
 }
 
 /* Supporting marketing content */
-.marketing {
+/*.marketing {
     margin: 40px 0;
 }
 .marketing p + h4 {
     margin-top: 28px;
-}
+}*/
 
-/* Responsive: Portrait tablets and up */
+/*/!* Responsive: Portrait tablets and up *!/
 @media screen and (min-width: 768px) {
-    /* Remove the padding we set earlier */
+    /!* Remove the padding we set earlier *!/
     .header,
     .marketing,
     .footer {
         padding-right: 0;
         padding-left: 0;
     }
-    /* Space out the masthead */
+    /!* Space out the masthead *!/
     .header {
         margin-bottom: 30px;
     }
-    /* Remove the bottom border on the jumbotron for visual effect */
+    /!* Remove the bottom border on the jumbotron for visual effect *!/
     .jumbotron {
         border-bottom: 0;
     }
-}
+}*/
 
 .glyphicon-arrow-right {
     visibility: hidden;
@@ -109,4 +103,36 @@ body {
 
 .player {
     display: none;
+}
+
+#dice {
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    height: 108px;
+    width: 108px;
+    background-image: url(http://lh5.ggpht.com/-yEEM8seKn18/T0ZwW5Cb5DI/AAAAAAAADAs/ZAf2qA8o29g/dice-sample%25255B7%25255D.png);
+}
+
+.one {
+    background-position: -8px -13px;
+}
+
+.two {
+    background-position: -119px -13px;
+}
+
+.three {
+    background-position: -227px -17px;
+}
+
+.four {
+    background-position: -11px 121px;
+}
+
+.five {
+    background-position: -119px 120px;
+}
+
+.six {
+    background-position: -228px 118px;
 }
