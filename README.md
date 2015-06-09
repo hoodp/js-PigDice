@@ -1,27 +1,3 @@
-<!DOCTYPE HTML SYSTEM "http://www.cis.gvsu.edu/~kurmasz/HTML4-loose-kielce.dtd">
-<html>
-<head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <title>CS 371 -- Pig Dice</title>
-    <script type="text/javascript" src="../kielce3.js"></script>
-    <style type="text/css">
-        .listHeader {
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-
-        ul {
-            padding-top: 0;
-            margin-top: 0;
-        }
-
-        .nowrap {
-            white-space: nowrap;
-        }
-    </style>
-</head>
-<body>
-
 <table style="border:  0; width: 100%">
     <tr>
         <td style="width: 15%"><h1 style="text-align: left; white-space: nowrap;" kkey="courseName">CS 371</h1></td>
@@ -161,15 +137,6 @@
 
 
 <hr>
-
-<span kkey="validator"></span>
-
-<script type="text/javascript">
-    // Kielce.run();
-</script>
-
-</body>
-</html>
 
 
 
