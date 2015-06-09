@@ -11,8 +11,8 @@ var Player = (function () {
 // for data only (i.e., it is effectively just a model.)
 
     var init = function (name_in) {
-        //TODO:  Add any necessary instance variables and instance methods 
-
+        //TODO:  Add any necessary instance variables and instance methods
+        //var player = function()
 
         return {
             init: init

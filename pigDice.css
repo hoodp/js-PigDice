@@ -82,3 +82,31 @@ body {
         border-bottom: 0;
     }
 }
+
+.glyphicon-arrow-right {
+    visibility: hidden;
+    position: absolute;
+    left: -35px;
+}
+
+.title {
+    position: relative;
+}
+
+#error {
+    visibility: hidden;
+}
+
+.progress {
+    height: 40px;
+}
+
+.progress-bar {
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.player {
+    display: none;
+}

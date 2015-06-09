@@ -11,8 +11,13 @@ GameDie.Model = (function () {
 
     var init = function () {
 
-        //TODO:  Add any necessary instance variables and instance methods 
-        
+        // simulates rolling the dice
+        var random = Math.floor((Math.random() * 6) + 1);
+        var value;
+
+        return {
+            roll : roll
+        }
     }; // end init
 
     return {

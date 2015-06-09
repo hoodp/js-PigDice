@@ -40,41 +40,95 @@
 <body>
     <div class="container">
         <div class="header clearfix">
-            <h1 class="text-muted">Pig Dice</h1>
+            <h1>Pig Dice</h1>
         </div>
 
         <div class="jumbotron">
-            <img class="img-responsive" alt="dice" src="https://lh5.ggpht.com/YfqsGQ1Jln88BuMU6S9PLqu_x3-4vloVDBuAOIYmNgygJn66KaGG4BufAR7zkCkpRKA=w300">
-            <p>
-                <button type="button" class="btn btn-primary btn-lg">Role</button>
-                <button type="button" class="btn btn-success btn-lg">Pass</button>
-            </p>
+            <!-- START CONFIGURATION -->
+            <form id="configuration" class="form-horizontal">
+                <div class="form-group">
+                    <label for="player1" class="col-sm-2 control-label">Player 1:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="player1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="player2" class="col-sm-2 control-label">Player 2:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="player2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="player3" class="col-sm-2 control-label">Player 3:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="player3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="player4" class="col-sm-2 control-label">Player 4:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="player4">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="score" class="col-sm-2 control-label">Score: <span id="sliderVal"></span></label>
+                    <div class="col-sm-10">
+                        <input id="score" type="range" max="100" min="10" step="10" value="20">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Begin</button>
+                    </div>
+                </div>
+            </form>
+            <!-- END CONFIGURATION -->
+
+            <!-- START GAME DISPLAY -->
+            <div class="hidden" id="game">
+                <div class="col-sm-12">
+                    <h1 class="red" id="dice">1</h1>
+                    <!--<img id="dice" src="dice/dice1.png" alt="dice">-->
+                </div>
+                <!--<img class="img-responsive" alt="dice" src="https://lh5.ggpht.com/YfqsGQ1Jln88BuMU6S9PLqu_x3-4vloVDBuAOIYmNgygJn66KaGG4BufAR7zkCkpRKA=w300">-->
+                <p>
+                    <button id="roll" type="button" class="btn btn-primary btn-lg">Roll</button>
+                    <button id="pass" type="button" class="btn btn-success btn-lg">Pass</button>
+                </p>
+                <h2 class="red">Current Points: <span id="points"></span></h2>
+                <h2 class="red" id="error">Loss of turn.</h2>
+            </div>
+            <!-- END GAME DISPLAY -->
         </div>
 
-        <div class="row marketing">
-            <div class="col-lg-6">
-                <h4>Subheading</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-                <h4>Subheading</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-                <h4>Subheading</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <!-- START GAME PROGRESS -->
+        <div id="stats" class="hidden">
+            <div class="player">
+                <h3 class="title"><span class="glyphicon glyphicon-arrow-right"></span></h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                </div>
             </div>
-
-            <div class="col-lg-6">
-                <h4>Subheading</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-                <h4>Subheading</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-                <h4>Subheading</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <div class="player">
+                <h3 class="title"><span class="glyphicon glyphicon-arrow-right"></span></h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                </div>
+            </div>
+            <div class="player">
+                <h3 class="title"><span class="glyphicon glyphicon-arrow-right"></span></h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                </div>
+            </div>
+            <div class="player">
+                <h3 class="title"><span class="glyphicon glyphicon-arrow-right"></span></h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                </div>
             </div>
         </div>
-
+        <!-- END GAME PROGRESS -->
         <footer class="footer"></footer>
 
     </div> <!-- /container -->
