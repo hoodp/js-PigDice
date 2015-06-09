@@ -29,7 +29,7 @@ var Player = (function () {
         return {
             getName : getName,
             getScore : getScore,
-            incScore : incScore
+            add : incScore
         };
     };
 
