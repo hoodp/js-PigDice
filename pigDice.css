@@ -9,16 +9,11 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.jumbotron {
+#layout {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
     margin: 0;
-    padding: 0;
-}
-
-.jumbotron .btn {
-    padding: 14px 24px;
-    font-size: 21px;
+    padding-top: 20px;
 }
 
 .glyphicon-arrow-right {
@@ -35,7 +30,7 @@ body {
     visibility: hidden;
 }
 
-.progress {
+/*.progress {
     height: 40px;
 }
 
@@ -43,7 +38,7 @@ body {
     line-height: 40px;
     font-weight: bold;
     font-size: 16px;
-}
+}*/
 
 .player {
     display: none;
