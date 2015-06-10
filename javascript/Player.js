@@ -7,9 +7,6 @@
  */
 var Player = (function () {
 
-// Notice that this is just one class.  It is not an MVC triad.  That is because the Player object is 
-// for data only (i.e., it is effectively just a model.)
-
     var init = function (name_in) {
         var name = name_in;
         var score = 0;

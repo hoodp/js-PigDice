@@ -6,6 +6,9 @@
  * Created by kurmasz on 2/11/15.
  */
 
+// define the model if not set for testing
+if (GameDie === undefined)
+    var GameDie = {};
 
 GameDie.Model = (function () {
 
@@ -38,6 +41,7 @@ GameDie.Model = (function () {
                 case 6:
                     return "six";
             }
+            return null;
         };
 
         return {
