@@ -43,7 +43,8 @@ PigGame.View = (function () {
 
         // displays the winner
         var showWinner = function(winner) {
-            document.getElementById("dice").innerHTML = winner + " wins!";
+            document.getElementById("dice").outerHTML =
+                "<h1>" + winner + " wins!</h1>";
             rollBtn.setAttribute("disabled", true);
             passBtn.setAttribute("disabled", true);
 
